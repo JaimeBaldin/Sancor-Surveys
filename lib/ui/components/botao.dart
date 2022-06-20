@@ -5,12 +5,11 @@ class Botao extends StatelessWidget {
   final String texto;
   final BotaoEnum tipo;
   final VoidCallback clique;
-  final ButtonStyle? cor;
+
   final IconData? icone;
 
   const Botao({
     this.texto = '',
-    this.cor,
     this.tipo = BotaoEnum.quadrado,
     required this.clique,
     this.icone,
