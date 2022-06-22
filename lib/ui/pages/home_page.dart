@@ -16,9 +16,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+     // appBar: AppBar(
 
-      ),
+      //),
       body: Container(
         padding: const EdgeInsets.only(
           top: 60,
@@ -29,8 +29,8 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: [
             SizedBox(
-              width: 250,
-              height: 250,
+              width: 280,
+              height: 280,
               child: Image.asset("assets/images/logo.png"),
             ),
             const SizedBox(
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Botao(tipo: BotaoEnum.quadrado,
                 clique: _abrirListaEmpresa,
-                texto: "Empresas Cadastradas")
+                texto: "Entrar")
           ],
         ),
       ),
