@@ -16,30 +16,30 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+     // appBar: AppBar(
 
-      ),
+      //),
       body: Container(
         padding: const EdgeInsets.only(
           top: 60,
           left: 40,
           right: 40,
         ),
-        color: const Color(0xFFe4f6f6),
+        color: const Color(0xFF202024),
         child: ListView(
           children: [
             SizedBox(
-              width: 250,
-              height: 250,
+              width: 280,
+              height: 280,
               child: Image.asset("assets/images/logo.png"),
             ),
             const SizedBox(
               height: 80,
 
             ),
-            Botao(tipo: BotaoEnum.texto,
+            Botao(tipo: BotaoEnum.quadrado,
                 clique: _abrirListaEmpresa,
-                texto: "Empresas Cadastradas")
+                texto: "Entrar")
           ],
         ),
       ),
