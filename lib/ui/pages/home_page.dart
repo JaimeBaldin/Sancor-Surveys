@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/enums/botao_enum.dart';
 import 'package:hackathon/ui/components/botao.dart';
+import 'package:hackathon/ui/pages/funcionarios_page/funcionarios_page.dart';
 import 'package:hackathon/ui/pages/pages.dart';
 
 
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Botao(tipo: BotaoEnum.quadrado,
                 clique: _abrirListaEmpresa,
-                texto: "Entrar")
+                texto: "Entrar"),
           ],
         ),
       ),
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _abrirListaEmpresa() async {
-    await Navigator.push(context, MaterialPageRoute(builder: (context) => const ListaEmpresa()));
+    await Navigator.push(context, MaterialPageRoute(builder: (context) => const FuncionariosPage()));
   }
 
 }

@@ -1,0 +1,1 @@
+export'funcionarios_remote.dart';
