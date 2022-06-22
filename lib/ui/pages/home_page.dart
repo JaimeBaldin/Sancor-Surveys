@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           left: 40,
           right: 40,
         ),
-        color: const Color(0xFFe4f6f6),
+        color: const Color(0xFF202024),
         child: ListView(
           children: [
             SizedBox(
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               height: 80,
 
             ),
-            Botao(tipo: BotaoEnum.texto,
+            Botao(tipo: BotaoEnum.quadrado,
                 clique: _abrirListaEmpresa,
                 texto: "Empresas Cadastradas")
           ],
