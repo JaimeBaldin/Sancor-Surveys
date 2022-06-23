@@ -17,6 +17,7 @@ class ListaFuncionarios extends StatelessWidget {
       itemBuilder: (context, index) {
         return GestureDetector(
           child: Card(
+            //color: C
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
               child: Row(
@@ -30,7 +31,9 @@ class ListaFuncionarios extends StatelessWidget {
               )
             )
           ),
+
         );
+
         },
     );
   }

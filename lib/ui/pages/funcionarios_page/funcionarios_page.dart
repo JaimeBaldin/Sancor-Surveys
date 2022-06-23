@@ -31,7 +31,7 @@ class _FuncionariosPageState extends State<FuncionariosPage> {
                     return const CirculoEspera();
                   default:
                     if (snapshot.hasError) {
-                      return Text("Erro ao exigir a listagem (${snapshot.error.toString()})");
+                      return Text("Erro ao exibir a listagem (${snapshot.error.toString()})");
                     }
                     else {
                       return ListaFuncionarios(snapshot.data as List<Funcionarios>);

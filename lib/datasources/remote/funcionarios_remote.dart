@@ -3,11 +3,10 @@ import 'package:hackathon/http/http.dart';
 import 'package:hackathon/models/funcionarios.dart';
 
 class FuncionariosRemote {
-  final _link = "${linkApiCliente}";
   final _clienteHttp = ClienteHttp();
 
   Future<List<Funcionarios>> get() async {
-    final listaDados = await _clienteHttp.getJson(link: _link);
+    final listaDados = await _clienteHttp.getJson(link: linkApiCliente);
     return _todosFuncionarios(listaDados);
   }
 
