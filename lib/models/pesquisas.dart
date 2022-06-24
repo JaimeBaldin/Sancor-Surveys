@@ -18,7 +18,7 @@ class Pesquisas {
     return Pesquisas(
       id: mapa['id'].toString().toInt(),
       title: (mapa['title'] ?? '').replaceAll('~/', linkApiPesquisa),
-      description:mapa['description'] ?? '',
+      description:(mapa['description'] ?? '').replaceAll('~/', linkApiPesquisa) ,
     );
   }
 

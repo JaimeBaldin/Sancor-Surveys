@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/models/pesquisas.dart';
+import 'package:hackathon/ui/pages/todas_pequisas/widgets/detalhes_lista_todas_pesquisas_page.dart';
 
 class ListaTodasPesquias extends StatelessWidget {
 
@@ -34,4 +35,10 @@ class ListaTodasPesquias extends StatelessWidget {
       },
     );
   }
+
+  void _abrirDetalhesPesquisas(BuildContext context, Pesquisas pesquisas) {
+    Navigator.push(context, MaterialPageRoute(
+        builder: (context) => DetalhesListaPesquisas(, pesquisas)))
+  }
+
 }
