@@ -5,7 +5,6 @@ class Botao extends StatelessWidget {
   final String texto;
   final BotaoEnum tipo;
   final VoidCallback clique;
-
   final IconData? icone;
 
   const Botao({
@@ -29,7 +28,14 @@ class Botao extends StatelessWidget {
   }
 
   Widget _criarBotaoQuadrado() {
-    return ElevatedButton(child: _criarItemBotao(), onPressed: clique);
+    return ElevatedButton(
+        style: ButtonStyle(
+          padding: MaterialStateProperty.all(EdgeInsets.all(21)),
+        ),
+        child:
+        _criarItemBotao(),
+        onPressed: clique
+    );
   }
 
   Widget _criarItemBotao() {

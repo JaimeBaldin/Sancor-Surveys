@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/enums/botao_enum.dart';
 import 'package:hackathon/ui/components/botao.dart';
+import 'package:hackathon/ui/components/campo_texto.dart';
 import 'package:hackathon/ui/pages/funcionarios_page/funcionarios_page.dart';
 import 'package:hackathon/ui/pages/pages.dart';
 
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
           left: 40,
           right: 40,
         ),
-        color: const Color(0xFF202024),
+        color: Colors.black87,
         child: ListView(
           children: [
             SizedBox(
@@ -38,6 +39,8 @@ class _HomePageState extends State<HomePage> {
               height: 80,
 
             ),
+            CampoTexto(controller:TextEditingController() , texto: "Digite seu E-mail",),
+            CampoTexto(controller: TextEditingController(), texto: "Digite a sua senha"),
             Botao(tipo: BotaoEnum.quadrado,
                 clique: _abrirListaEmpresa,
                 texto: "Entrar"),
