@@ -11,15 +11,14 @@ class ListaFuncionarios extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(12),
       scrollDirection: Axis.vertical,
       itemCount: listaDados.length,
       itemBuilder: (context, index) {
         return GestureDetector(
           child: Card(
-            //color: C
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
               child: Row(
                 children: [
                   const SizedBox(width: 8,),

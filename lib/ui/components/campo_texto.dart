@@ -17,7 +17,7 @@ class CampoTexto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       child: TextField(
         controller: controller,
         keyboardType: teclado ?? TextInputType.text,

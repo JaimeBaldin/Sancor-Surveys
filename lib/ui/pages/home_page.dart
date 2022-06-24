@@ -5,6 +5,7 @@ import 'package:hackathon/ui/components/botao.dart';
 import 'package:hackathon/ui/components/campo_texto.dart';
 import 'package:hackathon/ui/pages/funcionarios_page/funcionarios_page.dart';
 import 'package:hackathon/ui/pages/pages.dart';
+import 'package:hackathon/ui/pages/tela_menu_page/menu_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -31,12 +32,12 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: [
             SizedBox(
-              width: 280,
-              height: 280,
+              width: 220,
+              height: 220,
               child: Image.asset("assets/images/logo.png"),
             ),
             const SizedBox(
-              height: 80,
+              height: 40,
 
             ),
             CampoTexto(controller:TextEditingController() , texto: "Digite seu E-mail",),
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _abrirListaEmpresa() async {
-    await Navigator.push(context, MaterialPageRoute(builder: (context) => const FuncionariosPage()));
+    await Navigator.push(context, MaterialPageRoute(builder: (context) => const MenuPage()));
   }
 
 }

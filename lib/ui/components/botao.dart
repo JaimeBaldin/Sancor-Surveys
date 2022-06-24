@@ -30,7 +30,7 @@ class Botao extends StatelessWidget {
   Widget _criarBotaoQuadrado() {
     return ElevatedButton(
         style: ButtonStyle(
-          padding: MaterialStateProperty.all(EdgeInsets.all(21)),
+          padding: MaterialStateProperty.all(EdgeInsets.all(10)),
         ),
         child:
         _criarItemBotao(),

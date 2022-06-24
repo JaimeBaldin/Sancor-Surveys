@@ -1,6 +1,5 @@
 import 'package:hackathon/constantes.dart';
 import 'package:hackathon/helpers/extensions.dart';
-import '';
 
 class Funcionarios {
   int id;
