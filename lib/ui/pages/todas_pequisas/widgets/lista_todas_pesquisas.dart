@@ -5,7 +5,6 @@ import 'package:hackathon/ui/pages/todas_pequisas/widgets/detalhes_lista_todas_p
 class ListaTodasPesquias extends StatelessWidget {
 
   final List<Pesquisas> listaDados;
-
   const ListaTodasPesquias(this.listaDados,{Key? key}) : super(key: key);
 
   @override
@@ -17,7 +16,6 @@ class ListaTodasPesquias extends StatelessWidget {
         itemBuilder: (context,index){
         return GestureDetector(
           child: Card(
-            //color: C
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
               child: Row(
@@ -31,6 +29,7 @@ class ListaTodasPesquias extends StatelessWidget {
               ),
             ),
           ),
+          onTap: (){ _abrirDetalhesPesquisas(context, listaDados[index]);},
         );
       },
     );
@@ -38,7 +37,7 @@ class ListaTodasPesquias extends StatelessWidget {
 
   void _abrirDetalhesPesquisas(BuildContext context, Pesquisas pesquisas) {
     Navigator.push(context, MaterialPageRoute(
-        builder: (context) => DetalhesListaPesquisas(, pesquisas)))
+        builder: (context) => DetalhesListaPesquisas(pesquisas)));
   }
 
 }
