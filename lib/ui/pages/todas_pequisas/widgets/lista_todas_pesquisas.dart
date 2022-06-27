@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon/enums/botao_enum.dart';
 import 'package:hackathon/models/pesquisas.dart';
+import 'package:hackathon/ui/components/botao.dart';
 import 'package:hackathon/ui/pages/todas_pequisas/widgets/detalhes_lista_todas_pesquisas_page.dart';
 
 class ListaTodasPesquias extends StatelessWidget {
 
   final List<Pesquisas> listaDados;
+
   const ListaTodasPesquias(this.listaDados,{Key? key}) : super(key: key);
 
   @override
@@ -16,14 +19,27 @@ class ListaTodasPesquias extends StatelessWidget {
         itemBuilder: (context,index){
         return GestureDetector(
           child: Card(
+            color: Colors.blueGrey,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22),
+              side: BorderSide(
+                color: Colors.purple,
+                width: 2,
+              ),
+            ),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
               child: Row(
                 children: [
                   const SizedBox(width: 8,),
-                 Text(
-                    listaDados[index].title,
-                    style: const TextStyle(fontSize: 20),
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Center(
+                     child: Text(
+                        listaDados[index].title,
+                        style: const TextStyle(fontSize: 20),
+                     ),
+                   ),
                  ),
                 ]
               ),

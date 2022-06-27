@@ -13,6 +13,7 @@ ThemeData meuTema() {
 
 
 
+
   final elevatedButton = ElevatedButtonThemeData(
     style: ButtonStyle(
       backgroundColor: MaterialStateProperty.all<Color>(primaryColor),
@@ -26,6 +27,7 @@ ThemeData meuTema() {
 return ThemeData(
   appBarTheme: appBar,
   elevatedButtonTheme: elevatedButton,
+  backgroundColor: Colors.pink,
 );
 
 

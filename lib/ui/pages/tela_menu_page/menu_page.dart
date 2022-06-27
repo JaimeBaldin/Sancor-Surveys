@@ -30,6 +30,12 @@ class _MenuPageState extends State<MenuPage> {
             const SizedBox(
               height: 80,
             ),
+            Botao(
+                clique: (){
+                  _abirtListaPesquisasSemResposta();
+                },
+                texto: "Pesquisas sem Responder",
+            ),
             SizedBox(
               width: 150,
               height: 150,
@@ -49,5 +55,8 @@ class _MenuPageState extends State<MenuPage> {
     await Navigator.push(context, MaterialPageRoute(builder: (context) => const TodasPesquisasPage()));
   }
 
+  void _abirtListaPesquisasSemResposta() async {
+    await Navigator.push(context, MaterialPageRoute(builder: (context) => const TodasPesquisasPage()));
+  }
 
 }

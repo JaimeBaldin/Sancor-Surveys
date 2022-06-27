@@ -27,13 +27,11 @@ class Botao extends StatelessWidget {
     return TextButton(child: _criarItemBotao(), onPressed: clique);
   }
 
+
+
   Widget _criarBotaoQuadrado() {
     return ElevatedButton(
-        style: ButtonStyle(
-          padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-        ),
-        child:
-        _criarItemBotao(),
+        child: _criarItemBotao(),
         onPressed: clique
     );
   }

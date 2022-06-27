@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/constantes.dart';
 import 'package:hackathon/enums/botao_enum.dart';
-import 'package:hackathon/helpers/extensions.dart';
 import 'package:hackathon/models/models.dart';
-import 'package:hackathon/models/respostas.dart';
 import 'package:hackathon/ui/components/botao.dart';
 
-class DetalhesListaPesquisas extends StatelessWidget {
+class DetalhesListaSemResponder extends StatelessWidget {
 
-  final Pesquisas pesquisas;
- // final Respostas respostas;
+  final PesquisasSemResponder pesquisas;
 
-
-  const DetalhesListaPesquisas(this.pesquisas, {Key? key}) : super(key: key);
+  const DetalhesListaSemResponder(this.pesquisas,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,5 +40,4 @@ class DetalhesListaPesquisas extends StatelessWidget {
       )
     );
   }
-
 }
