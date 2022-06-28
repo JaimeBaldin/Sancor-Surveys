@@ -2,28 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:hackathon/datasources/datasources.dart';
 import 'package:hackathon/models/models.dart';
 import 'package:hackathon/ui/components/circulo_espera.dart';
-import 'package:hackathon/ui/pages/pesquisas_sem_responder/widgets/lista_sem_resposta_page.dart';
+import 'package:hackathon/ui/pages/pesquisas_respondidas/widgets/lista_pesquisas_respondidas.dart';
 
-class TodasSemResposta extends StatefulWidget {
-  const TodasSemResposta({Key? key}) : super(key: key);
+
+class TodasRespondidas extends StatefulWidget {
+  const TodasRespondidas({Key? key}) : super(key: key);
 
   @override
-  State<TodasSemResposta> createState() => _TodasSemRespostaState();
+  State<TodasRespondidas> createState() => _TodasRespondidasState();
 }
 
-class _TodasSemRespostaState extends State<TodasSemResposta> {
+class _TodasRespondidasState extends State<TodasRespondidas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Pesquisas sem Respostas"),
+        title: const Text("Pesquisas Respondidas"),
         centerTitle: true,
       ),
       body: Column(
         children: [
           Expanded(
             child: FutureBuilder(
-              future: PesquisasSemResponderRemote().get(),
+              future: PesquisasRespondidasRemote().get(),
               builder: (context, snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.waiting:
@@ -34,7 +35,7 @@ class _TodasSemRespostaState extends State<TodasSemResposta> {
                       return Text("Erro ao exibir a listagem (${snapshot.error.toString()})");
                     }
                     else {
-                      return ListaSemResponder(snapshot.data as List<PesquisasSemResponder>);
+                      return ListaRespondidas(snapshot.data as List<PesquisasRespondidas>);
                     }
                 }
               },

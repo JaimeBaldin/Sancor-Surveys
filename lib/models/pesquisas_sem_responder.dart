@@ -14,9 +14,9 @@ class PesquisasSemResponder {
 
   factory PesquisasSemResponder.fromMap(Map<String, dynamic> mapa) {
     return PesquisasSemResponder(
-      id: mapa['id'].toString().toInt(),
-      title: (mapa['title'] ?? '').replaceAll('~/', linkApiSemResposta),
-      description:(mapa['description'] ?? '').replaceAll('~/', linkApiSemResposta) ,
+      id: mapa['id_survey'].toString().toInt(),
+      title: (mapa['title_survey'] ?? '').replaceAll('~/', linkApiSemResposta),
+      description:(mapa['description_survey'] ?? '').replaceAll('~/', linkApiSemResposta) ,
     );
   }
 

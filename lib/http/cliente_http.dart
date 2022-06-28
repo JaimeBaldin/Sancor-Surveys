@@ -8,9 +8,8 @@ class ClienteHttp {
     return json.decode(response.body);
   }
 
-  Future<dynamic> postJson({required String link, required Map<String, dynamic> body}) async {
+  Future<dynamic> postJson({required String link, body}) async {
     http.Response response = await http.post(Uri.parse(link), body: body);
-    //print(response.body);
     return json.decode(response.body);
   }
 

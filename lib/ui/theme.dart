@@ -27,7 +27,6 @@ ThemeData meuTema() {
 return ThemeData(
   appBarTheme: appBar,
   elevatedButtonTheme: elevatedButton,
-  backgroundColor: Colors.pink,
 );
 
 

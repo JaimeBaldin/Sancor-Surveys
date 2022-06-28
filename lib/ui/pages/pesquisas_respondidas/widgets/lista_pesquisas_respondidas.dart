@@ -1,14 +1,12 @@
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:hackathon/models/models.dart';
-import 'package:hackathon/models/respostas.dart';
-import 'package:hackathon/ui/pages/pesquisas_sem_responder/widgets/detalhes_sem_resposta.dart';
+import 'package:hackathon/ui/pages/pesquisas_respondidas/widgets/detalhes_respondidas.dart';
 
+class ListaRespondidas extends StatelessWidget {
 
-class ListaSemResponder extends StatelessWidget {
+  final List<PesquisasRespondidas> listaDados;
 
-  final List<PesquisasSemResponder> listaDados;
-
-  const ListaSemResponder(this.listaDados,{Key? key}) : super(key: key);
+  const ListaRespondidas(this.listaDados,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +49,9 @@ class ListaSemResponder extends StatelessWidget {
     );
   }
 
-  void _abrirDetalhes(BuildContext context, PesquisasSemResponder pesquisas) {
+  void _abrirDetalhes(BuildContext context, PesquisasRespondidas pesquisas) {
     Navigator.push(context, MaterialPageRoute(
-        builder: (context) => DetalhesListaSemResponder(pesquisas)));
+        builder: (context) => DetalhesRespondidas(pesquisas)));
   }
 
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/enums/botao_enum.dart';
 import 'package:hackathon/models/pesquisas.dart';
-import 'package:hackathon/ui/components/botao.dart';
 import 'package:hackathon/ui/pages/todas_pequisas/widgets/detalhes_lista_todas_pesquisas_page.dart';
 
 class ListaTodasPesquias extends StatelessWidget {
@@ -22,7 +20,7 @@ class ListaTodasPesquias extends StatelessWidget {
             color: Colors.blueGrey,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(22),
-              side: BorderSide(
+              side:const BorderSide(
                 color: Colors.purple,
                 width: 2,
               ),

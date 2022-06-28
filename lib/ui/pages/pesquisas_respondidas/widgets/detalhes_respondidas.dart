@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/enums/botao_enum.dart';
+import 'package:hackathon/helpers/extensions.dart';
 import 'package:hackathon/models/models.dart';
-import 'package:hackathon/ui/components/botao.dart';
 
-class DetalhesListaPesquisas extends StatelessWidget {
 
-  final Pesquisas pesquisas;
+class DetalhesRespondidas extends StatelessWidget {
 
-  const DetalhesListaPesquisas(this.pesquisas, {Key? key}) : super(key: key);
+  final PesquisasRespondidas pesquisas;
+
+  const DetalhesRespondidas(this.pesquisas,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,21 +31,10 @@ class DetalhesListaPesquisas extends StatelessWidget {
                     pesquisas.description,
                     style: TextStyle(fontSize: 20),
                   ),
-                  Botao(clique: (){
-
-                  }, texto: "Nota entre 1-2",tipo: BotaoEnum.quadrado,),
-                  Botao(clique: (){
-
-                  }, texto: "Nota entre 3-4",tipo: BotaoEnum.quadrado,),
-                  Botao(clique: (){
-
-                  }, texto: "Nota entre 5-6",tipo: BotaoEnum.quadrado,),
-                  Botao(clique: (){
-
-                  }, texto: "Nota entre 7-8",tipo: BotaoEnum.quadrado,),
-                  Botao(clique: (){
-
-                  }, texto: "Nota entre 9-10",tipo: BotaoEnum.quadrado,),
+                  Text(
+                    pesquisas.value.toInt().toString(),
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ],
               ),
             ),
@@ -54,8 +43,8 @@ class DetalhesListaPesquisas extends StatelessWidget {
       )
     );
   }
-
-
-
-
 }
+
+
+
+

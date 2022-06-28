@@ -7,14 +7,14 @@ class PesquisasSemResponderRemote{
   final _clienteHttp = ClienteHttp();
 
   Future<List<PesquisasSemResponder>> get() async {
-    final listaDados = await _clienteHttp.getJson(link: linkApiSemResposta);
-    return _todasPesquisasSem(listaDados);
+    final listaSem = await _clienteHttp.getJson(link: linkApiSemResposta);
+    return _todasPesquisasSem(listaSem);
   }
 
-  List<PesquisasSemResponder> _todasPesquisasSem(List<dynamic> listaDados) {
+  List<PesquisasSemResponder> _todasPesquisasSem(List<dynamic> listaSem) {
     List<PesquisasSemResponder> listaRetorno = [];
-    for (var i = 0; i < listaDados.length; i++) {
-      listaRetorno.add(PesquisasSemResponder.fromMap(listaDados[i]));
+    for (var i = 0; i < listaSem.length; i++) {
+      listaRetorno.add(PesquisasSemResponder.fromMap(listaSem[i]));
     }
     return listaRetorno;
   }
