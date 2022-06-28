@@ -67,7 +67,7 @@ class DetalhesListaSemResponder extends StatelessWidget {
 
 
 
-  Future<http.Response> enviarResposta(Respostas respostas) async {
+ /* Future<http.Response> enviarResposta(Respostas respostas) async {
     const _linkRespostas = linkApiResposta;
     return http.post(
       Uri.parse(_linkRespostas),
@@ -80,6 +80,6 @@ class DetalhesListaSemResponder extends StatelessWidget {
         'value': '',
       }),
     );
-  }
+  }*/
 
 }
